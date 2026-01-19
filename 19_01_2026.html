@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Practice Portfolio</title>
+  <meta name="description" content="HTML fundamentals practice covering structure, forms, tables, media and semantic elements">
+</head>
+<body>
+
+  <header>
+    <h1>HTML Practice Portfolio</h1>
+    <p>This page is created to practice and apply core HTML fundamentals.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About This Page</h2>
+      <p>HTML is used to structure web content using elements and attributes.</p>
+      <p>This page uses <strong>semantic elements</strong> and <em>clean structure</em> to improve accessibility and readability.</p>
+      <p>Learning HTML properly helps in building <mark>maintainable</mark> and <mark>scalable</mark> web pages.</p>
+      <p>Version reference: HTML<sup>5</sup></p>
+    </section>
+
+    <section id="content">
+      <h2>Text and Content Elements</h2>
+
+      <article>
+        <h3>Headings and Paragraphs</h3>
+        <p>Headings are used to define hierarchy and structure of content.</p>
+        <p>Paragraphs are used for readable blocks of text.</p>
+      </article>
+
+      <article>
+        <h3>Inline Elements</h3>
+        <p>You can use <b>bold</b>, <i>italic</i>, <strong>strong</strong>, and <em>emphasis</em> inline.</p>
+        <p>Chemical formula example: H<sub>2</sub>O</p>
+        <p>Math example: 10<sup>2</sup></p>
+      </article>
+
+      <article>
+        <h3>Preformatted Content</h3>
+        <pre>
+HTML
+CSS
+JavaScript
+        </pre>
+        <code>&lt;section&gt;Content&lt;/section&gt;</code>
+      </article>
+    </section>
+
+    <section id="media">
+      <h2>Images and Embedded Content</h2>
+
+      <figure>
+        <img src="https://via.placeholder.com/400" alt="Practice placeholder image" width="400">
+        <figcaption>Sample image used for HTML practice</figcaption>
+      </figure>
+
+      <p>This section demonstrates image usage and embedded external content.</p>
+
+      <iframe src="https://example.com" title="Example website iframe" width="400" height="200"></iframe>
+    </section>
+
+    <section id="skills">
+      <h2>Lists and Skills</h2>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>HTML fundamentals</li>
+        <li>Semantic structure</li>
+        <li>Forms and inputs</li>
+      </ul>
+
+      <h3>Ordered Learning Path</h3>
+      <ol>
+        <li>Understand structure</li>
+        <li>Practice elements</li>
+        <li>Build pages</li>
+      </ol>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Defines structure of content</dd>
+        <dt>Accessibility</dt>
+        <dd>Makes content usable for everyone</dd>
+      </dl>
+    </section>
+
+    <section id="data">
+      <h2>Tabular Data</h2>
+
+      <table border="1">
+        <caption>Internship Practice Log</caption>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day 1</td>
+            <td>HTML Basics</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>Day 2</td>
+            <td>Forms and Tables</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>Day 3</td>
+            <td>Semantic HTML</td>
+            <td>In Progress</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Form</h2>
+
+      <form>
+        <fieldset>
+          <legend>Basic Information</legend>
+
+          <label for="fullname">Full Name</label><br>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required><br><br>
+
+          <label for="email">Email Address</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label>Role</label><br>
+          <input type="radio" name="role"> Student
+          <input type="radio" name="role"> Intern
+          <input type="radio" name="role"> Developer<br><br>
+
+          <label>Technologies</label><br>
+          <input type="checkbox"> HTML
+          <input type="checkbox"> CSS
+          <input type="checkbox"> JavaScript<br><br>
+
+          <label for="experience">Experience Level</label><br>
+          <select id="experience">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Details</legend>
+
+          <label for="message">Message</label><br>
+          <textarea id="message" rows="4" cols="40" placeholder="Write something"></textarea><br><br>
+        </fieldset>
+
+        <button type="submit">Send</button>
+        <button type="reset">Clear</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>HTML5 Interactive Elements</h2>
+
+      <details>
+        <summary>Why semantic HTML matters</summary>
+        <p>Semantic HTML improves accessibility, SEO, and code readability.</p>
+      </details>
+
+      <br>
+
+      <label>Progress</label>
+      <progress value="70" max="100"></progress>
+
+      <br><br>
+
+      <label>Skill Level</label>
+      <meter value="0.8">80%</meter>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 HTML Practice Page</p>
+    <p>This page is built using only HTML without external styling.</p>
+  </footer>
+
+</body>
+</html>
