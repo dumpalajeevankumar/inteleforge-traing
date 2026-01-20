@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Practice Portfolio</title>
+  <meta name="description" content="HTML and CSS practice covering structure, layout, forms, tables and semantic elements">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #111827;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 30px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #111827;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      color: #1f2937;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    article {
+      margin-bottom: 20px;
+    }
+
+    pre, code {
+      background-color: #f1f5f9;
+      padding: 10px;
+      display: block;
+      margin-bottom: 10px;
+      overflow-x: auto;
+    }
+
+    img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+    }
+
+    figcaption {
+      font-size: 14px;
+      color: #555;
+    }
+
+    iframe {
+      border: 1px solid #ddd;
+      margin-top: 10px;
+    }
+
+    ul, ol, dl {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f3f4f6;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    progress, meter {
+      width: 100%;
+      height: 20px;
+      margin-top: 5px;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>HTML Practice Portfolio</h1>
+    <p>This page demonstrates HTML and CSS fundamentals.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About This Page</h2>
+      <p>HTML provides structure while CSS handles presentation.</p>
+      <p>This page is built using <strong>semantic HTML</strong> and clean styling.</p>
+    </section>
+
+    <section id="content">
+      <h2>Text and Formatting</h2>
+      <article>
+        <p>You can use <b>bold</b>, <i>italic</i>, <em>emphasis</em>, and <strong>strong</strong> text.</p>
+        <p>Example: H<sub>2</sub>O and 10<sup>2</sup></p>
+      </article>
+    </section>
+
+    <section id="media">
+      <h2>Images and Embedded Content</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400" alt="Practice image">
+        <figcaption>Sample image</figcaption>
+      </figure>
+      <iframe src="https://example.com" width="400" height="200" title="Example iframe"></iframe>
+    </section>
+
+    <section id="skills">
+      <h2>Lists</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Accessibility</li>
+      </ul>
+      <ol>
+        <li>Learn</li>
+        <li>Practice</li>
+        <li>Build</li>
+      </ol>
+    </section>
+
+    <section id="data">
+      <h2>Table</h2>
+      <table>
+        <caption>Practice Log</caption>
+        <tr>
+          <th>Day</th>
+          <th>Topic</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>HTML</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>CSS</td>
+          <td>Completed</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Form</h2>
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Enter name" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Message</label>
+        <textarea rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>HTML5 Elements</h2>
+      <details>
+        <summary>Why semantic HTML?</summary>
+        <p>It improves accessibility and SEO.</p>
+      </details>
+
+      <label>Progress</label>
+      <progress value="70" max="100"></progress>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 HTML & CSS Practice</p>
+  </footer>
+
+</body>
+</html>
