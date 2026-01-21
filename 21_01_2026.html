@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML CSS JavaScript Practice</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #111827;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f3f4f6;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 18px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .box {
+      padding: 15px;
+      background-color: #f1f5f9;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Frontend Practice File</h1>
+  <p>HTML, CSS and JavaScript fundamentals in one file</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#text">Text</a></li>
+    <li><a href="#list">Lists</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#form">Form</a></li>
+    <li><a href="#js">JavaScript</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="text">
+    <h2>Text & Formatting</h2>
+    <p>This page uses <strong>semantic HTML</strong> and <em>clean structure</em>.</p>
+    <p>Example: H<sub>2</sub>O and 10<sup>2</sup></p>
+  </section>
+
+  <section id="list">
+    <h2>Lists</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <ol>
+      <li>Learn basics</li>
+      <li>Practice</li>
+      <li>Build projects</li>
+    </ol>
+  </section>
+
+  <section id="table">
+    <h2>Table</h2>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Topic</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>HTML</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>CSS</td>
+        <td>Completed</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="form">
+    <h2>Form & Validation</h2>
+    <form id="userForm">
+      <label>Name</label>
+      <input type="text" id="name">
+
+      <label>Email</label>
+      <input type="email" id="email">
+
+      <label>Role</label>
+      <select id="role">
+        <option value="">Select</option>
+        <option>Student</option>
+        <option>Intern</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="formMessage"></p>
+  </section>
+
+  <section id="js">
+    <h2>JavaScript Interaction</h2>
+
+    <button id="countBtn">Click Me</button>
+    <span id="count">0</span>
+
+    <div class="box">
+      <button id="toggleBtn">Show / Hide Text</button>
+      <p id="toggleText" class="hidden">This text is controlled by JavaScript.</p>
+    </div>
+
+    <div class="box">
+      <h3>Dynamic List</h3>
+      <button id="addItem">Add Item</button>
+      <ul id="dynamicList"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Frontend Practice</p>
+</footer>
+
+<script>
+  let count = 0;
+  const countBtn = document.getElementById("countBtn");
+  const countDisplay = document.getElementById("count");
+
+  countBtn.addEventListener("click", () => {
+    count++;
+    countDisplay.innerText = count;
+  });
+
+  const toggleBtn = document.getElementById("toggleBtn");
+  const toggleText = document.getElementById("toggleText");
+
+  toggleBtn.addEventListener("click", () => {
+    toggleText.classList.toggle("hidden");
+  });
+
+  const list = document.getElementById("dynamicList");
+  const addItem = document.getElementById("addItem");
+  let itemNumber = 1;
+
+  addItem.addEventListener("click", () => {
+    const li = document.createElement("li");
+    li.innerText = "Item " + itemNumber;
+    list.appendChild(li);
+    itemNumber++;
+  });
+
+  const form = document.getElementById("userForm");
+  const message = document.getElementById("formMessage");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const role = document.getElementById("role").value;
+
+    if (name === "" || email === "" || role === "") {
+      message.innerText = "Please fill all fields.";
+      message.style.color = "red";
+    } else {
+      message.innerText = "Form submitted successfully.";
+      message.style.color = "green";
+      form.reset();
+    }
+  });
+
+  const user = {
+    name: "Norea",
+    role: "Intern"
+  };
+
+  console.log(user);
+</script>
+
+</body>
+</html>
